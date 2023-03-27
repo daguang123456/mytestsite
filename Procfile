@@ -1,1 +1,1 @@
-web: gunicorn mytestsite.wsgi --log-file -
+web: python manage.py migrate && python manage.py collectstatic --noinput && gunicorn locallibrary.wsgi
